@@ -35,7 +35,7 @@ $memos->execute()
 ?>
 
  <article>
-     <?php while ($memo = $memos->fetch()): ?> <!-- fetchメソッドはテーブルのデータを一件ずつ取り出す -->
+     <?php while ($memo = $memos->fetch()): ?> <!-- fetchメソッドはテーブルのデータを一件ずつ取り出す文 -->
       <p><a href="memo.php?id=<?php print($memo['id']); ?>"><?php print(mb_substr($memo['memo'], 0, 50)); //mb_substrは長いメモを0,から50文字だけを表示する ?></a></p> <!-- $memoの中から'memo'カラムの項目をリンクで表示する -->
       <time><?php print($memo['created_at']); ?></time>
       <hr>
