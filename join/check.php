@@ -1,8 +1,23 @@
 <?php
 session_start();
+require('../dbconnect.php'); //DBに接続
 
-if (!isset($_SESSION['join'])) {
+if (!isset($_SESSION['join'])) { 
 	header('Location: index.php');
+	exit();
+}
+
+if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
+	$statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, picture=?, created=NOW()');
+	$statement->execute(array(  //DBに保存する項目
+		$_SESSION['join']['name'],
+		$_SESSION['join']['email'],
+		sha1($_SESSION['join']['password']),
+		$_SESSION['join']['image']
+	));
+	unset($_SESSION['join']); //$_SESSION変数の中身をからにする
+
+	header('Location: thanks.php'); //完了画面にアクセス
 	exit();
 }
 ?>
@@ -48,6 +63,9 @@ if (!isset($_SESSION['join'])) {
 
 					<dt>写真など</dt>
 					<dd>
+					 <?php if ($_SESSION['join']['image'] !== ''): ?>
+					  <img src="../member_picture/<?php print(htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES)); ?>">
+					 <?php endif; ?>
 					</dd>
 				</dl>
 				<div><a href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a> | <input type="submit" value="登録する" /></div>
