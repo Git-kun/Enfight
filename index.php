@@ -11,10 +11,10 @@
 <title>PHP</title>
 </head>
 <body>
-<header>
+<!-- <header>
 <h1 class="font-weight-normal">投稿一覧</h1>
 
-</header>
+</header> -->
 
 <main>
 <h2><a href="input.html">投稿する</a></h2>
