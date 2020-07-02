@@ -2,7 +2,7 @@
 session_start();
 require('../dbconnect.php'); //DBに接続
 
-if (!isset($_SESSION['join'])) { 
+if (!isset($_SESSION['join'])) { //入力フォームに正しい記入がない場合入力画面にとばす
 	header('Location: index.php');
 	exit();
 }

@@ -1,8 +1,8 @@
 <?php
-session_start();
+session_start(); //セッションを使用する
 require('../dbconnect.php'); //DBに接続
 
-if (!empty($_POST)) {
+if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif文を走らせる
 	if ($_POST['name'] === '') {
 		$error['name'] = 'blank';
 	}
@@ -43,9 +43,9 @@ if (!empty($_POST)) {
 	if (empty($error)) {
 			$image = date('YmdHis') . $_FILES['image']['name'];
 			move_uploaded_file($_FILES['image']['tmp_name'],'../member_picture/' . $image);
-			$_SESSION['join'] = $_POST;
+			$_SESSION['join'] = $_POST; //check.php(確認画面)でもセッションに入れた入力情報を表示する
 			$_SESSION['join']['image'] = $image;
-			header('Location: check.php');
+			header('Location: check.php'); //エラーがない場合は'check.php'へジャンプ
 			exit();
 	}
 }
@@ -86,7 +86,7 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) {
 							<p class="error">* ニックネームを入力してください</p>
 						<?php endif ?>
 					</dd>
-					<dt>パスワード<span class="required">必須</span></dt>
+					<dt>パスワード(6文字以上)<span class="required">必須</span></dt>
 					<dd>
 						<input type="password" name="password" size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>" />
 						<?php if ($error['password'] === 'length') : ?>
