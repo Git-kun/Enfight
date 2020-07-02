@@ -17,7 +17,7 @@
 </header>
 
 <main>
-<h2><a href="input.html">投稿する!</a></h2>
+<h2><a href="input.html">メモる!</a></h2>
 <?php 
 require('dbconnect.php');
 
