@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); //セッションを使用する
 require('../dbconnect.php'); //DBに接続
 
 if (!isset($_SESSION['join'])) { //入力フォームに正しい記入がない場合入力画面にとばす
@@ -63,7 +63,7 @@ if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
 
 					<dt>写真など</dt>
 					<dd>
-					 <?php if ($_SESSION['join']['image'] !== ''): ?>
+					 <?php if ($_SESSION['join']['image'] !== ''): ?>  <!-- 配列の画像が空でなければ -->
 					  <img src="../member_picture/<?php print(htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES)); ?>">
 					 <?php endif; ?>
 					</dd>

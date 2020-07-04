@@ -41,7 +41,7 @@ if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif�
 	}
 
 	if (empty($error)) {
-			$image = date('YmdHis') . $_FILES['image']['name'];
+			$image = date('YmdHis') . $_FILES['image']['name']; //変数にアップ日時とファイル名を代入
 			move_uploaded_file($_FILES['image']['tmp_name'],'../member_picture/' . $image);
 			$_SESSION['join'] = $_POST; //check.php(確認画面)でもセッションに入れた入力情報を表示する
 			$_SESSION['join']['image'] = $image;
@@ -50,8 +50,8 @@ if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif�
 	}
 }
 
-if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) {
-	$_POST = $_SESSION['join'];
+if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラメータが'rewrite'があるまたは$_SESSIONに値がある時
+	$_POST = $_SESSION['join']; //配列[$_POST]に$_SESSIONを入れなおす
 }
 
 ?>
@@ -77,7 +77,7 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) {
 
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
-			<form action="" method="post" enctype="multipart/form-data">
+			<form action="" method="post" enctype="multipart/form-data"> <!-- ←ファイルをアップする時に必要 -->
 				<dl>
 					<dt>ニックネーム<span class="required">必須</span></dt>
 					<dd>
