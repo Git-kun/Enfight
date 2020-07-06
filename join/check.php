@@ -63,7 +63,7 @@ if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
 
 					<dt>写真など</dt>
 					<dd>
-					 <?php if ($_SESSION['join']['image'] !== ''): ?>  <!-- 配列の画像が空でなければ -->
+					 <?php if ($_SESSION['join']['image'] !== ''): ?>  <!-- 配列の画像が空でなければ画像を表示 -->
 					  <img src="../member_picture/<?php print(htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES)); ?>">
 					 <?php endif; ?>
 					</dd>
