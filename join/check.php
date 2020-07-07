@@ -8,11 +8,12 @@ if (!isset($_SESSION['join'])) { //入力フォームに正しい記入がない
 }
 
 if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
-	$statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, picture=?, created=NOW()');
+	$statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, age=?, picture=?, created=NOW()');
 	$statement->execute(array(  //DBに保存する項目
 		$_SESSION['join']['name'],
 		$_SESSION['join']['email'],
 		sha1($_SESSION['join']['password']),
+		$_SESSION['join']['age'],
 		$_SESSION['join']['image']
 	));
 	unset($_SESSION['join']); //$_SESSION変数の中身をからにする

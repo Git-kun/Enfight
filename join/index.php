@@ -15,12 +15,14 @@ if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif�
 	if ($_POST['email'] === '') {
 		$error['email'] = 'blank';
 	}
-	if (strlen($_POST['age']) > 2) {
-		$error['age'] = 'length';
-	}
+	// if (strlen($_POST['age']) > 2) {
+	// 	$error['age'] = 'length';
+	// }
 	if ($_POST['age'] === '') {
 		$error['age'] = 'blank';
 	}
+
+	
 	$fileName = $_FILES['image']['name'];
 	if (!empty($fileName)) {
 		$ext = substr($fileName, -3); //ファイルの拡張子を得て変数に代入
@@ -107,11 +109,8 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 						<?php endif ?>
 					<dt>年齢<span class="required">必須</span></dt>
 					<dd>
-						<input type="age" name="age" size="3" maxlength="20" value="<?php print(htmlspecialchars($_POST['age'], ENT_QUOTES)); ?>" />
+						<input type="age" name="age" size="2" maxlength="2" value="<?php print(htmlspecialchars($_POST['age'], ENT_QUOTES)); ?>" />
 					</dd>
-					<?php if ($error['age'] === 'length') : ?>
-							<p class="error">* 適性な年齢を入力してください</p>
-						<?php endif ?>
 					<?php if ($error['age'] === 'blank') : ?>
 							<p class="error">* 年齢を入力してください</p>
 						<?php endif ?>
