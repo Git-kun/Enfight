@@ -8,7 +8,7 @@ if (!isset($_SESSION['join'])) { //入力フォームに正しい記入がない
 }
 
 if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
-	$statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, age=?, picture=?, created=NOW()');
+	$statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, age=?, gender=?,picture=?, created=NOW()');
 	$statement->execute(array(  //DBに保存する項目
 		$_SESSION['join']['name'],
 		$_SESSION['join']['email'],
@@ -62,6 +62,10 @@ if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
 					<dt>年齢</dt>
 					<dd>
 					<?php print(htmlspecialchars($_SESSION['join']['age'], ENT_QUOTES)); ?>
+					</dd>
+					<dt>性別</dt>
+					<dd>
+					<?php print(htmlspecialchars($_SESSION['join']['gender'], ENT_QUOTES)); ?>
 					</dd>
 
 					<dt>写真など</dt>

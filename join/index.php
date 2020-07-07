@@ -33,7 +33,7 @@ if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif�
 		}
 	}
 	
-	//アカウントの重複をチェック
+	//アカウント(メールアドレス)の重複をチェック
 	if (empty($error)) { //ここまででエラーは入っていないかのチェック
 		$member = $db->prepare('SELECT COUNT(*) AS cnt FROM members WHERE email=?');
 		$member->execute(array($_POST['email']));
@@ -118,11 +118,11 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 						<?php endif ?>
 					<dt>性別<span class="required">必須</span></dt>
 					<dd>
-						<input type="radio" id="other" name="gender" value="<?php print(htmlspecialchars($_POST['gender'], ENT_QUOTES)); ?>">
+						<input type="radio" id="other" name="gender" value="指定なし">
 						<label for="other">指定なし</label><br>
-						<input type="radio" id="male" name="gender" value="<?php print(htmlspecialchars($_POST['gender'], ENT_QUOTES)); ?>">
+						<input type="radio" id="male" name="gender" value="男性">
 						<label for="male">男性</label><br>
-						<input type="radio" id="female" name="gender" value="<?php print(htmlspecialchars($_POST['gender'], ENT_QUOTES)); ?>">
+						<input type="radio" id="female" name="gender" value="女性">
 						<label for="female">女性</label><br>
 					</dd>
 					<?php if ($error['gender'] === 'blank') : ?>
