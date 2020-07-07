@@ -14,6 +14,8 @@ if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
 		$_SESSION['join']['email'],
 		sha1($_SESSION['join']['password']),
 		$_SESSION['join']['age'],
+		$_SESSION['join']['gender'],
+
 		$_SESSION['join']['image']
 	));
 	unset($_SESSION['join']); //$_SESSION変数の中身をからにする

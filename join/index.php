@@ -21,8 +21,10 @@ if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif�
 	if ($_POST['age'] === '') {
 		$error['age'] = 'blank';
 	}
+	if ($_POST['gender'] === '') {
+		$error['gender'] = 'blank';
+	}
 
-	
 	$fileName = $_FILES['image']['name'];
 	if (!empty($fileName)) {
 		$ext = substr($fileName, -3); //ファイルの拡張子を得て変数に代入
@@ -116,14 +118,16 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 						<?php endif ?>
 					<dt>性別<span class="required">必須</span></dt>
 					<dd>
-						<input type="radio" id="other" name="gender" value="3">
+						<input type="radio" id="other" name="gender" value="<?php print(htmlspecialchars($_POST['gender'], ENT_QUOTES)); ?>">
 						<label for="other">指定なし</label><br>
-						<input type="radio" id="male" name="gender" value="0">
+						<input type="radio" id="male" name="gender" value="<?php print(htmlspecialchars($_POST['gender'], ENT_QUOTES)); ?>">
 						<label for="male">男性</label><br>
-						<input type="radio" id="female" name="gender" value="1">
+						<input type="radio" id="female" name="gender" value="<?php print(htmlspecialchars($_POST['gender'], ENT_QUOTES)); ?>">
 						<label for="female">女性</label><br>
 					</dd>
-					</dd>
+					<?php if ($error['gender'] === 'blank') : ?>
+							<p class="error">* 性別を選択してください</p>
+						<?php endif ?>
 					<dt>結婚<span class="required">必須</span></dt>
 					<dd>
 						<input type="radio" id="married" name="marital_status" value="0">
