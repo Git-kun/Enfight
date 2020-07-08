@@ -1,3 +1,19 @@
+<?php
+session_start(); //セッションを使用する
+require('dbconnect.php'); //DBに接続
+
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) { //1時間何もしないとセッション値はなくなりログアウトされる
+    $_SESSION['time'] = time(); //何かアクションを起こした時の時間に更新する
+
+    $members = $db->prepare('SELECT * FROM members WHERE id=?'); //DBのmembersの中から決まったidをひっぱり出す
+    $members->execute(array($_SESSION['id'])); //セッションに入っているidを$memberとする
+    $member = $members->fetch(); //取得したデータを代入
+} else {
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!doctype html>
 <html lang="ja">
 <head>
@@ -12,12 +28,13 @@
 </head>
 <body>
 <header>
-<h1 class="font-weight-normal">投稿一覧</h1>
+<h1 class="font-weight-normal">ユーザー名</h1>
+<dt><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?> さん</dt>
 
 </header>
 
 <main>
-<h2><a href="input.html">メモる!</a></h2>
+<h2><a href="input.php">メモる!</a></h2>
 <?php 
 require('dbconnect.php');
 
