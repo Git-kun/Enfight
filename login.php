@@ -1,12 +1,12 @@
 <?php
-session_start();
-require('dbconnect.php');
+session_start(); //セッションを使用する
+require('dbconnect.php'); //DBに接続
 
 if ($_COOKIE['email'] !== '') {
   $email = $_COOKIE['email'];
 }
 
-if (!empty($_POST)) { //emptyは[空である]という意味　「!」が付けばその逆
+if (!empty($_POST)) { //emptyは[空である]という意味「!」が付けばその逆
   $email = $_POST['email']; //後で入力したアドレスで上書きをする
   if ($_POST['email'] !== '' && $_POST['password'] !== '') {
     $login = $db->prepare('SELECT * FROM members WHERE email=? AND password=?');
@@ -21,7 +21,7 @@ if (!empty($_POST)) { //emptyは[空である]という意味　「!」が付け
       $_SESSION['time'] = time();  //今の時間も入れておく
 
       if ($_POST['save'] === 'on') { //ログイン情報の記録
-        setcookie('email', $_POST['email'], time()+60*60*24*14);
+        setcookie('email', $_POST['email'], time()+60*60*24*7);
       }
 
       header('Location: index.php');

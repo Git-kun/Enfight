@@ -12,7 +12,7 @@ if (!empty($_POST)) { //$_POSTに何か入っていればDBに保存
 	$statement->execute(array(  //DBに保存する項目
 		$_SESSION['join']['name'],
 		$_SESSION['join']['email'],
-		sha1($_SESSION['join']['password']),
+		sha1($_SESSION['join']['password']), //sha1で暗号化
 		$_SESSION['join']['age'],
 		$_SESSION['join']['gender'],
 
