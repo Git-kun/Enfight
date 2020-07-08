@@ -46,7 +46,7 @@ if (!empty($_POST)) {  //入力フォームが空ではない時に以下のif�
 
 	if (empty($error)) {
 			$image = date('YmdHis') . $_FILES['image']['name']; //変数にアップ日時とファイル名を代入
-			move_uploaded_file($_FILES['image']['tmp_name'],'../member_picture/' . $image);
+			move_uploaded_file($_FILES['image']['tmp_name'],'../member_picture/' . $image); //move_uploaded_fileで今ある場所から次のフォルダにデータをアップロードする
 			$_SESSION['join'] = $_POST; //check.php(確認画面)でもセッションに入れた入力情報を表示する
 			$_SESSION['join']['image'] = $image;
 			header('Location: check.php'); //エラーがない場合は'check.php'へジャンプ
@@ -81,7 +81,7 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
-			<form action="" method="post" enctype="multipart/form-data"> <!-- ←ファイルをアップする時に必要 -->
+			<form action="" method="post" enctype="multipart/form-data"> <!-- ←ファイル(画像)をアップする時に必要(決まり文句) -->
 				<dl>
 					<dt>ニックネーム<span class="required">必須</span></dt>
 					<dd>
@@ -112,10 +112,11 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 					<dt>年齢<span class="required">必須</span></dt>
 					<dd>
 						<input type="age" name="age" size="2" maxlength="2" value="<?php print(htmlspecialchars($_POST['age'], ENT_QUOTES)); ?>" />
-					</dd>
-					<?php if ($error['age'] === 'blank') : ?>
+						<?php if ($error['age'] === 'blank') : ?>
 							<p class="error">* 年齢を入力してください</p>
 						<?php endif ?>
+					</dd>
+
 					<dt>性別<span class="required">必須</span></dt>
 					<dd>
 						<input type="radio" id="other" name="gender" value="指定なし">
