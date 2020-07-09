@@ -1,16 +1,3 @@
-<?php 
-    require('dbconnect.php');
-    if (!empty($_POST)) { //もし$_POSTに値が入っていれば
-        if ($_POST['memo'] !== '') { //もしmemoが空でなけらば
-            $statement = $db->prepare('INSERT INTO memos SET memo=?, member_id=?, created_at=NOW()'); //postのデータが安全に渡される為の記述
-            $statement->execute(array($_POST['memo'],$member['id'])); //ここでは上の「?」に入る値を指定する
-            echo 'メッセージが登録されました';
-
-        }
-
-    }
-?>
-
 
 <!doctype html>
 <html lang="ja">
@@ -30,7 +17,7 @@
 </header>
 
 <main>
-<h2>投稿画面</h2>
+<h2>メモ内容</h2>
 
 <form action="input_do.php" method="post">
   <textarea name="memo" cols="50" rows="10" placeholder="内容を記入してください"></textarea><br>

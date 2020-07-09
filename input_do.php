@@ -21,8 +21,8 @@
 <?php 
     require('dbconnect.php');
     
-    $statement = $db->prepare('INSERT INTO memos SET memo=?, created_at=NOW()'); //postのデータが安全に渡される為の記述
-    $statement->execute(array($_POST['memo'])); //ここでは上の「?」に入る値を指定する
+    $statement = $db->prepare('INSERT INTO memos SET memo=?, member_id=?, created_at=NOW()'); //postのデータが安全に渡される為の記述
+    $statement->execute(array($_POST['memo'],$member['id'])); //ここでは上の「?」に入る値を指定する
     echo 'メッセージが登録されました';
 ?>
 </pre>
