@@ -1,3 +1,18 @@
+<?php
+session_start(); //セッションを使用する
+require('dbconnect.php'); //DBに接続
+
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) { //1時間何もしないとセッション値はなくなりログアウトされる
+    $_SESSION['time'] = time(); //何かアクションを起こした時の時間に更新する
+
+    $members = $db->prepare('SELECT * FROM members WHERE id=?'); //DBのmembersの中から決まったidをひっぱり出す
+    $members->execute(array($_SESSION['id'])); //セッションに入っているidを$memberとする
+    $member = $members->fetch(); //取得したデータを代入
+} else {
+    header('Location: login.php');
+    exit();
+}
+?>
 
 <!doctype html>
 <html lang="ja">
