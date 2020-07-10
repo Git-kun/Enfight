@@ -17,7 +17,7 @@
 </header>
 
 <main>
-<h2>投稿詳細画面</h2>
+<h2>メモ詳細画面</h2>
 <?php 
 require('dbconnect.php');
 
