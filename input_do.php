@@ -39,7 +39,7 @@ if (!empty($_POST)) { //もし$_POSTに値が入っていれば
         $statement = $db->prepare('INSERT INTO memos SET memo=?, member_id=?, created_at=NOW()'); //postのデータが安全に渡される為の記述
         $statement->execute(array($_POST['memo'],$member['id'])); //ここでは上の「?」に入る値を指定する
         echo 'メッセージが登録されました';
-        // header('Location: input_do.php');
+        // header('Location: input_do.php'); $_POSTを空にする為のリダイレクト※今は停止
         // exit();
     } else {
     echo '*空欄ではメモれません';
