@@ -59,11 +59,26 @@
 
 ---
 
-<h3 align="center">- Responsive design -</h3>
+# DB設計
+## membersテーブル
+- ユーザーテーブル
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/39142850/69484905-e42ad500-0e7b-11ea-9a99-b92a099ca1d4.jpeg" width=30%>
-</p>
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false, unique: true|
+|mail|string|null: false, unique: true|
+|birthday_year|string||
+|birthday_month|string||
+|birthday_day|string||
+|password|string|null: false|
+|profile|text||
+|profile_image|string||
+### Association
+- has_many :items
+- has_many :comments
+- has_many :addresses
+- has_one  :card
+- has_one  :tell
 
 ## 🎫 License
 
