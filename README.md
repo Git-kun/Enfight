@@ -29,7 +29,7 @@
 　
 ## :art: Character Design
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://user-images.githubusercontent.com/39142850/69484816-0112d880-0e7b-11ea-99a4-9a06b928a7b8.jpeg" width=70%>
 </p><br><br>
 
@@ -55,7 +55,7 @@
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/39142850/69484904-e2f9a800-0e7b-11ea-9f43-36e13a29df47.gif" width=70%>
-</p>
+</p> -->
 
 ---
 
@@ -93,7 +93,7 @@
 |created_at|datetime||
 |modified|timestamp||
 
-## 🎫 License
+<!-- ## 🎫 License
 
 - [MIT](https://raw.githubusercontent.com/aocattleya/Ramen-Timer/master/LICENSE)  
 　
@@ -114,4 +114,4 @@ Thanks to all contributors 🎉
     <td align="center"><a href="https://github.com/Suzumebati"><img src="https://avatars1.githubusercontent.com/u/51582636?s=460&v=4" width="100px;" alt="suzumebati"/><br /><a href="https://github.com/Suzumebati" title="Code">:octocat: </a></a></td>
     <td align="center"><a href="https://github.com/ZhaoZuohong"><img src="https://avatars2.githubusercontent.com/u/34163622?s=460&u=cb835ba504af76e5e3ecbc94d7f75cb5540c916e&v=4" width="100px;" alt="Zhao Zuohong"/><br /><a href="https://github.com/ZhaoZuohong" title="Code">:octocat: </a></a></td>
   </tr>
-</table>
+</table> -->
