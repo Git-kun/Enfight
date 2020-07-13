@@ -1,6 +1,6 @@
 <!-- ![ramenTimer](https://user-images.githubusercontent.com/39142850/63760432-4403f500-c8fa-11e9-9eba-3e22c3179e06.gif) -->
 
-<h2 align="center">簡易メモ</h2>
+<h2 align="left">簡易メモ</h2>
 
 <!-- <p align="center">
   <a href="https://jp.vuejs.org/index.html"><img src="https://user-images.githubusercontent.com/39142850/71645835-a98d4580-2d21-11ea-9693-348d12101bb4.png" width="80px;" /></a><br>
