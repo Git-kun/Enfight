@@ -22,10 +22,10 @@
 
 ##  開発環境
 
-　開発言語　　　　　：PHP（7.4）
-　データベース　　　：MySQL（5.7）
-　バージョン管理　　：GitHub　
-　テキストエディター：VSCode（Visual Studio Code） 
+- 開発言語　　　　　：PHP（7.4）
+- データベース　　　：MySQL（5.7）
+- バージョン管理　　：GitHub　
+- テキストエディター：VSCode（Visual Studio Code）
 　
 ## :art: Character Design
 
