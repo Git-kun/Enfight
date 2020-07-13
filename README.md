@@ -1,7 +1,6 @@
 <!-- ![ramenTimer](https://user-images.githubusercontent.com/39142850/63760432-4403f500-c8fa-11e9-9eba-3e22c3179e06.gif) -->
 
 <h2 align="left">簡易メモ</h2>
-
 <!-- <p align="center">
   <a href="https://jp.vuejs.org/index.html"><img src="https://user-images.githubusercontent.com/39142850/71645835-a98d4580-2d21-11ea-9693-348d12101bb4.png" width="80px;" /></a><br>
 <a>　</a>
@@ -13,7 +12,7 @@
 <a>　</a>
   <a href="https://sweetalert.js.org/guides/"><img src="https://user-images.githubusercontent.com/39142850/71645994-b0b55300-2d23-11ea-86c9-b16c3d2a05ee.png" height="45px;" /></a>
 </p> -->
-<br><br><br>
+<br>
 
 ##  App URL
 
@@ -29,7 +28,6 @@
 - バージョン管理　　：GitHub　
 - テキストエディター：VSCode（Visual Studio Code）
 　
-## :art: Character Design
 
 <!-- <p align="center">
   <img src="https://user-images.githubusercontent.com/39142850/69484816-0112d880-0e7b-11ea-99a4-9a06b928a7b8.jpeg" width=70%>
