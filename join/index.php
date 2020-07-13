@@ -129,13 +129,13 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 					<?php if ($error['gender'] === 'blank') : ?>
 							<p class="error">* 性別を選択してください</p>
 						<?php endif ?>
-					<dt>結婚<span class="required">必須</span></dt>
+					<!-- <dt>結婚<span class="required">必須</span></dt>
 					<dd>
 						<input type="radio" id="married" name="marital_status" value="0">
 						<label for="married">既婚</label><br>
 						<input type="radio" id="unmarried" name="marital_status" value="1">
 						<label for="unmarried">未婚</label><br>
-					</dd>
+					</dd> -->
 
 
 					<dt>アイコン写真など</dt>
