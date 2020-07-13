@@ -17,7 +17,9 @@
 
 ##  App URL
 
-### **http://enfight.obearda.com/**  
+### **http://enfight.obearda.com/**
+- メールアドレス：test@com
+- パスワード：111111
 　
 
 ##  開発環境
