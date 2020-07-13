@@ -1,8 +1,8 @@
-<!-- ![ramenTimer](https://user-images.githubusercontent.com/39142850/63760432-4403f500-c8fa-11e9-9eba-3e22c3179e06.gif)
+<!-- ![ramenTimer](https://user-images.githubusercontent.com/39142850/63760432-4403f500-c8fa-11e9-9eba-3e22c3179e06.gif) -->
 
-<h2 align="center">Ramen Timer</h2>
+<h2 align="center">簡易メモ</h2>
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://jp.vuejs.org/index.html"><img src="https://user-images.githubusercontent.com/39142850/71645835-a98d4580-2d21-11ea-9693-348d12101bb4.png" width="80px;" /></a><br>
 <a>　</a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"><img src="https://user-images.githubusercontent.com/39142850/71645957-1ead4a80-2d23-11ea-9201-7261df80db57.jpg" height="45px;" /></a>
@@ -12,16 +12,20 @@
   <a href="https://firealpaca.com/"><img src="https://user-images.githubusercontent.com/39142850/71646089-82d10e00-2d25-11ea-8e4b-1004fac31a28.png" height="40px;" /></a>
 <a>　</a>
   <a href="https://sweetalert.js.org/guides/"><img src="https://user-images.githubusercontent.com/39142850/71645994-b0b55300-2d23-11ea-86c9-b16c3d2a05ee.png" height="45px;" /></a>
-</p>
+</p> -->
 <br><br><br>
 
-## 🌐 App URL
+##  App URL
 
-### **https://cupramen-timer.firebaseapp.com**  
+### **http://enfight.obearda.com/**  
 　
-## 💬 Usage
 
-`$ git clone https://github.com/aocattleya/Ramen-Timer.git`  <br><br>
+##  開発環境
+
+　開発言語　　　　　：PHP（7.4）
+　データベース　　　：MySQL（5.7）
+　バージョン管理　　：GitHub　
+　テキストエディター：VSCode（Visual Studio Code） 
 　
 ## :art: Character Design
 
@@ -82,4 +86,4 @@ Thanks to all contributors 🎉
     <td align="center"><a href="https://github.com/Suzumebati"><img src="https://avatars1.githubusercontent.com/u/51582636?s=460&v=4" width="100px;" alt="suzumebati"/><br /><a href="https://github.com/Suzumebati" title="Code">:octocat: </a></a></td>
     <td align="center"><a href="https://github.com/ZhaoZuohong"><img src="https://avatars2.githubusercontent.com/u/34163622?s=460&u=cb835ba504af76e5e3ecbc94d7f75cb5540c916e&v=4" width="100px;" alt="Zhao Zuohong"/><br /><a href="https://github.com/ZhaoZuohong" title="Code">:octocat: </a></a></td>
   </tr>
-</table> -->
+</table>
