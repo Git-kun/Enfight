@@ -61,24 +61,37 @@
 
 # DB設計
 ## membersテーブル
-- ユーザーテーブル
+- 登録ユーザー
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false, unique: true|
-|mail|string|null: false, unique: true|
-|birthday_year|string||
-|birthday_month|string||
-|birthday_day|string||
-|password|string|null: false|
-|profile|text||
-|profile_image|string||
+|id|int||
+|name|var||
+|email|varchar||
+|password|varchar||
+|age|tinyint||
+|gender|varchar||
+|picture|varchar||
+|created|datetime||
+|modified|timestamp||
 ### Association
 - has_many :items
 - has_many :comments
 - has_many :addresses
 - has_one  :card
 - has_one  :tell
+
+## memosテーブル
+- 投稿したメモ
+
+|Column|Type|Options|
+|------|----|-------|
+|id|int||
+|memo|text||
+|member_id|int||
+|reply_message_id|int||
+|created_at|datetime||
+|modified|timestamp||
 
 ## 🎫 License
 
