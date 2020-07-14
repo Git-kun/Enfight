@@ -1,4 +1,4 @@
-[![Image from Gyazo](https://i.gyazo.com/5eaf21a4c6394662481cd595de6eb4a3.gif)](https://gyazo.com/5eaf21a4c6394662481cd595de6eb4a3)
+<!-- [![Image from Gyazo](https://i.gyazo.com/5eaf21a4c6394662481cd595de6eb4a3.gif)](https://gyazo.com/5eaf21a4c6394662481cd595de6eb4a3) -->
 
 <h2 align="left">簡易メモ</h2>
 <br>
