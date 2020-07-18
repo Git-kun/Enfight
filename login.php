@@ -52,7 +52,7 @@ if (!empty($_POST)) { //emptyは[空である]という意味「!」が付けば
       <div id="lead">
         <p>メールアドレスとパスワードを記入してログインしてください。</p>
         <p>入会手続きがまだの方はこちらからどうぞ。</p>
-        <p>&raquo;<a href="join/">入会手続きをする</a></p>
+        <p>&raquo;<a href="join/">新規会員登録</a></p>
       </div>
       <form action="" method="post">
         <dl>
