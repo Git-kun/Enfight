@@ -35,7 +35,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) { //1時間何�
 
 <main>
 <h2><a href="input.php">メモる!</a></h2>
-<div style="text-align: right"><a href="logout.php">ログアウト</a></div>
+<div style="text-align: right"><a href="logout.php" class="logoutbutton">ログアウト</a></div>
 <?php 
 require('dbconnect.php');
 
