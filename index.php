@@ -14,7 +14,6 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) { //1時間何�
 }
 ?>
 
-
 <!doctype html>
 <html lang="ja">
 <head>
