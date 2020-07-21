@@ -28,7 +28,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) { //1時間何�
 </head>
 <body>
 <header>
-<h1 class="font-weight-normal">ユーザー名</h1>
+<!-- <h1 class="font-weight-normal">ユーザー名</h1> -->
 <dt><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?> さん</dt>
 
 </header>
