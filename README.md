@@ -25,7 +25,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|int||
+|id|int|primary_key|
 |name|var||
 |email|varchar||
 |password|varchar||
@@ -46,7 +46,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|int||
+|id|int|primary_key|
 |memo|text||
 |member_id|int||
 |reply_message_id|int||
