@@ -117,7 +117,7 @@ if ($_REQUEST['action'] == 'rewrite'  && isset($_SESSION['join'])) { //URパラ�
 						<?php endif ?>
 					</dd>
 
-					<dt>性別<span class="required">任意</span></dt>
+					<dt>性別<span class="optional">任意</span></dt>
 					<dd>
 						<input type="radio" id="other" name="gender" value="指定なし">
 						<label for="other">指定なし</label><br>

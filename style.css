@@ -85,6 +85,14 @@ dd {
 	padding: 2px;
 	margin-left: 10px;
 }
+.optional {
+	background-color: #BB1850;
+	color: #fff;
+	font-size: 90%;
+	padding: 2px;
+	margin-left: 10px;
+}
+
 
 #foot {
 	width: 780px;
