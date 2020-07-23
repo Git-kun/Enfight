@@ -60,7 +60,6 @@ h2 {
 * html #content {
 	height: 490px;
 }
-
 p {
 	line-height: 1.2em;
 	margin-bottom: 0.9em;
@@ -150,4 +149,7 @@ li {
 .msg .day a {
 	font-size: 80%;
 	color: #999;
+}
+.previous {
+	margin-top: 5px;
 }
