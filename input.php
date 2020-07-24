@@ -44,7 +44,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) { //1時間何�
 
 <form action="input_do.php" method="post">
   <textarea name="memo" cols="50" rows="10" placeholder="内容を記入してください"></textarea><br>
-  <button type="submit">投稿する</button>
+  <button type="submit">メモする</button>
   |
   <a href="index.php">戻る</a>
 </form>
