@@ -13,8 +13,6 @@
 <body>
 <header>
 <h1 class="font-weight-normal">投稿一覧</h1>
-<dt><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?></dt>
-
 
 </header>
 
