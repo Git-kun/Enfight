@@ -1,4 +1,3 @@
-<!-- [![Image from Gyazo](https://i.gyazo.com/5eaf21a4c6394662481cd595de6eb4a3.gif)](https://gyazo.com/5eaf21a4c6394662481cd595de6eb4a3) -->
 
 <h1 align="left">簡易メモ</h1>
 <br>
@@ -8,13 +7,12 @@
 ### **http://enfight.obearda.com/**
 - メールアドレス：test@com
 - パスワード：111111
-　
 
 ##  開発環境
 
 - 開発言語　　　　　：PHP（7.4）
 - データベース　　　：MySQL（5.7）
-- バージョン管理　　：GitHub　
+- バージョン管理　　：GitHub
 - テキストエディター：VSCode（Visual Studio Code）
 
 ---
