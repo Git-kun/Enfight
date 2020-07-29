@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-<h1 class="font-weight-normal">投稿一覧</h1>
+<h1 class="font-weight-normal">メモ作成</h1>
 
 </header>
 
