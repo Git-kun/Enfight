@@ -46,7 +46,7 @@ if (!empty($_POST)) { //emptyは[空である]という意味「!」が付けば
 <body>
   <div id="wrap">
     <div id="head">
-      <h1>ログインする</h1>
+      <h1>ログイン</h1>
     </div>
     <div id="content">
       <div id="lead">
