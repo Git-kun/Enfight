@@ -35,7 +35,6 @@
 <!-- ### Association
 - has_many :items
 - has_many :comments
-- has_many :addresses
 - has_one  :card
 - has_one  :tell -->
 
