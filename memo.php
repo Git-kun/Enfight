@@ -25,7 +25,6 @@ require('dbconnect.php');
  if (!is_numeric($id) || $id <= 0) { //パラメータの中身が数字でないまたは0以上かを確認する
   print('1以上の数字で指定してください');
   exit();
-
  }
 
 $memos = $db->prepare('SELECT * FROM memos WHERE id=?'); //prepareならidの受け渡しが安全
