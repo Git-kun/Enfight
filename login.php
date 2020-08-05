@@ -86,5 +86,4 @@ if (!empty($_POST)) { //emptyは[空である]という意味「!」が付けば
     </div>
   </div>
 </body>
-
 </html>
